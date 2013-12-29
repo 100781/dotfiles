@@ -3,7 +3,7 @@
 # Ask for sudo upfront.
 sudo -v
 
-cd ${HOME}/$(dirname $0)
+cd $(dirname $0)
 #git pull origin master
 
 function doIt () {
