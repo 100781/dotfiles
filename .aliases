@@ -9,6 +9,12 @@ alias o="open"
 alias oo="open ."
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n"
 
+# Lamp Shortcuts
+alias apache-start="sudo apachectl start"
+alias apache-stop="sudo apachectl stop"
+alias apache-restart="sudo apachectl restart"
+alias apache-debug="sudo apachectl -k start -e Debug -E /dev/stdout"
+
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
