@@ -14,13 +14,13 @@ function doIt () {
   sudo cp -a .lamp/httpd-vhosts.conf /etc/apache2/extra/
 }
 if [[ "$1" == "-y" ]]; then
-	doIt
+  doIt
 else
-	read -q "REPLY?This may overwrite existing files in your home directory. Are you sure? (y/n) "
-	echo
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		doIt
-	fi
+  read -q "REPLY?This may overwrite existing files in your home directory. Are you sure? (y/n) "
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    doIt
+  fi
 fi
 unset doIt
 
