@@ -1,5 +1,8 @@
 #!/bin/zsh
 
+# Ask for sudo upfront.
+sudo -v
+
 cd ${HOME}/$(dirname $0)
 #git pull origin master
 
@@ -7,8 +10,8 @@ function doIt () {
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bin/" --exclude "dotfiles.png" --exclude "bootstrap.zsh" --exclude "README.md" --exclude ".lamp" -av --no-perms . ~
 
   # Handle LAMP config files.
-  cp -a .lamp/httpd.conf /etc/apache2/
-  cp -a .lamp/httpd-vhosts.conf /etc/apache2/extra/
+  sudo cp -a .lamp/httpd.conf /etc/apache2/
+  sudo cp -a .lamp/httpd-vhosts.conf /etc/apache2/extra/
 }
 if [[ "$1" == "-y" ]]; then
 	doIt
