@@ -62,17 +62,22 @@ set scrolloff=3
 " Enable filetype detection
 filetype plugin on
 "Complete longest string, then list alternatives
-set wildmode=longest,list   
+set wildmode=longest,list
 "Toggle paste mode
-set pastetoggle=<F2>        
+set pastetoggle=<F2>
 "Use Unix line endings
-set fileformats=unix        
+set fileformats=unix
 "Number of commands to remember
-set history=300             
+set history=300
 "Show matching brackets/parentheses
-set showmatch               
+set showmatch
 "Break lines when appropriate
-set linebreak               
+set linebreak
+
+"Set a central dir for vim swp files
+set directory=~/.vim/swap,/tmp
+"Set a central dir for backup files
+set backupdir=~/.vim/backups,/tmp
 
 " Persistent Undo (vim 7.3 and later)
 if exists('&undofile') && !&undofile
