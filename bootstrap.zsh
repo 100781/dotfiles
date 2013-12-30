@@ -7,11 +7,26 @@ cd $(dirname $0)
 #git pull origin master
 
 function doIt () {
+  echo "\n--== Copying DOT files ==--"
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bin/" --exclude "dotfiles.png" --exclude "bootstrap.zsh" --exclude "README.md" --exclude ".lamp" -av --no-perms . ~
 
   # Handle LAMP config files.
-  sudo cp -a .lamp/httpd.conf /etc/apache2/
-  sudo cp -a .lamp/httpd-vhosts.conf /etc/apache2/extra/
+  echo "\n--== Copying LAMP files ==--"
+  sudo cp -av .lamp/httpd.conf /etc/apache2/
+  sudo cp -av .lamp/httpd-vhosts.conf /etc/apache2/extra/
+  sudo cp -av .lamp/php.ini /usr/local/etc/php/5.4/
+  echo "\n"
+
+  source ~/.zshrc
+
+  # Restart apache
+  echo "Restarted Apache"
+  sudo apachectl restart
+
+  # Include OSX settings
+  if [[ "$OSTYPE" =~ ^darwin ]]; then
+    source ~/.osx
+  fi
 }
 if [[ "$1" == "-y" ]]; then
   doIt
@@ -23,10 +38,3 @@ else
   fi
 fi
 unset doIt
-
-source ~/.zshrc
-
-# Include OSX settings
-if [[ "$OSTYPE" =~ ^darwin ]]; then
-  source ~/.osx
-fi
