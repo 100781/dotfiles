@@ -15,6 +15,7 @@ function doIt () {
   sudo cp -av .lamp/httpd.conf /etc/apache2/
   sudo cp -av .lamp/httpd-vhosts.conf /etc/apache2/extra/
   sudo cp -av .lamp/php.ini /usr/local/etc/php/5.4/
+  sudo cp -av .lamp/conf.d /usr/local/etc/php/5.4/
   sudo cp -av .lamp/my.cnf /etc/mysql/
   sudo cp -av .lamp/hosts /etc/
   echo "\n"
