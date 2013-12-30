@@ -15,13 +15,15 @@ function doIt () {
   sudo cp -av .lamp/httpd.conf /etc/apache2/
   sudo cp -av .lamp/httpd-vhosts.conf /etc/apache2/extra/
   sudo cp -av .lamp/php.ini /usr/local/etc/php/5.4/
+  sudo cp -av .lamp/my.cnf /etc/mysql/
   echo "\n"
 
   source ~/.zshrc
 
   # Restart apache
-  echo "Restarted Apache"
   sudo apachectl restart
+  mysql.server restart
+  echo "Restarted Apache & Mysql"
 
   # Include OSX settings
   if [[ "$OSTYPE" =~ ^darwin ]]; then

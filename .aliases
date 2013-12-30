@@ -10,10 +10,16 @@ alias oo="open ."
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n"
 
 # Lamp Shortcuts
+alias lamp-start="sudo apachectl start; mysql.server start"
+alias lamp-stop="sudo apachectl stop; mysql.server stop"
+alias lamp-restart="sudo apachectl restart; mysql.server restart"
 alias apache-start="sudo apachectl start"
 alias apache-stop="sudo apachectl stop"
 alias apache-restart="sudo apachectl restart"
 alias apache-debug="sudo apachectl -k start -e Debug -E /dev/stdout"
+alias mysql-start="mysql.server start"
+alias mysql-stop="mysql.server stop"
+alias mysql-restart="mysql.server restart"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
