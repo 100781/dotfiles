@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=~/.oh-my-zsh
 
 # Set default user.
 DEFAULT_USER=bleen
@@ -19,10 +19,10 @@ plugins=(git)
 fpath=(~/.zsh $fpath)
 
 # Include aliases
-source $HOME/.aliases
+source ~/.aliases
 
 # Include exports
-source $HOME/.exports
+source ~/.exports
 
 source $ZSH/oh-my-zsh.sh
 
