@@ -65,6 +65,7 @@
 [merge]
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+	tool = diffmerge
 
 [branch]
 	autosetuprebase = always
@@ -76,6 +77,7 @@
 [diff]
 # When renaming or copying files, git diff will not show the entire file content for the rename/copy, but merely a single line denoting the rename/copy instead
 	renames = copies
+	tool = diffmerge
 
 # URL shorthands
 [url "git@github.com:"]
@@ -95,3 +97,10 @@
 #	default = matching
 [push]
 	default = simple
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
+[difftool "diffmerge"]
+	cmd = diffmerge $LOCAL $REMOTE
