@@ -23,8 +23,7 @@ function doIt () {
   source ~/.zshrc
 
   # Restart apache
-  sudo apachectl restart
-  mysql.server restart
+  mysql.server restart >/dev/null
   echo "Restarted Apache & Mysql"
 
   # Include OSX settings
