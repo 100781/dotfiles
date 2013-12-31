@@ -12,12 +12,12 @@ function doIt () {
 
   # Handle LAMP config files.
   echo "\n--== Copying LAMP files ==--"
-  sudo cp -av .lamp/httpd.conf /etc/apache2/
-  sudo cp -av .lamp/extra /etc/apache2/
-  sudo cp -av .lamp/php.ini /usr/local/etc/php/5.4/
-  sudo cp -av .lamp/conf.d /usr/local/etc/php/5.4/
-  sudo cp -av .lamp/my.cnf /etc/mysql/
-  sudo cp -av .lamp/hosts /etc/
+  sudo rsync -av --no-perms .lamp/httpd.conf /etc/apache2
+  sudo rsync -av --no-perms .lamp/extra/ /etc/apache2/extra
+  sudo rsync -av --no-perms .lamp/php.ini /usr/local/etc/php/5.4
+  sudo rsync -av --no-perms .lamp/conf.d/ /usr/local/etc/php/5.4/conf.d
+  sudo rsync -av --no-perms .lamp/my.cnf /etc/mysql
+  sudo rsync -av --no-perms .lamp/hosts /etc
   echo "\n"
 
   source ~/.zshrc
