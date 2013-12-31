@@ -1,12 +1,13 @@
 #!/bin/zsh
 
-# Ask for sudo upfront.
-sudo -v
-
-cd $(dirname $0)
-#git pull origin master
-
 function doIt () {
+  # Ask for sudo upfront.
+  sudo -v
+
+  # Change to the dotfiles directory.
+  cd $(dirname $0)
+
+  # Copy dotfiles.
   echo "\n--== Copying DOT files ==--"
   rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bin/" --exclude "dotfiles.png" --exclude "bootstrap.zsh" --exclude "README.md" --exclude ".lamp" -av --no-perms . ~
 
@@ -18,19 +19,21 @@ function doIt () {
   sudo rsync -av --no-perms .lamp/conf.d/ /usr/local/etc/php/5.4/conf.d
   sudo rsync -av --no-perms .lamp/my.cnf /etc/mysql
   sudo rsync -av --no-perms .lamp/hosts /etc
-  echo "\n"
 
+  # Include shell settings
+  echo "\n--== Sourcing dotfiles ==--"
   source ~/.zshrc
-
-  # Restart apache
-  mysql.server restart >/dev/null
-  echo "Restarted Apache & Mysql"
-
   # Include OSX settings
   if [[ "$OSTYPE" =~ ^darwin ]]; then
     source ~/.osx
   fi
+
+  # Restart apache
+  echo "\n--== Restarting LAMP ==--"
+  mysql.server restart >/dev/null
+  echo "Restarted Apache & Mysql"
 }
+
 if [[ "$1" == "-y" ]]; then
   doIt
 else
