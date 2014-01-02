@@ -17,10 +17,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# Include aliases
+# Include aliases - This does not get called when running "source .zshrc"
 source ~/.aliases
 
-# Include exports
+# Include exports - This does not get called when running "source .zshrc"
 source ~/.exports
 
 # Needed for git-completion. See http://goo.gl/SZkRo3

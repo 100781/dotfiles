@@ -23,6 +23,9 @@ function doIt () {
   # Include shell settings
   echo "\n--== Sourcing dotfiles ==--"
   source ~/.zshrc
+  source ~/.aliases
+  source ~/.exports
+
   # Include OSX settings
   if [[ "$OSTYPE" =~ ^darwin ]]; then
     source ~/.osx
