@@ -2,6 +2,7 @@
 alias s="cd ~/Sites"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
+alias dot="cd ~/Cloud/Repos/dotfiles"
 alias g="git"
 alias h="history"
 alias v="vim"
