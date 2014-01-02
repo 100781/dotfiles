@@ -15,8 +15,7 @@ ZSH_THEME="agnoster"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
-# Needed for git-completion. See http://goo.gl/SZkRo3
-fpath=(~/.zsh $fpath)
+source $ZSH/oh-my-zsh.sh
 
 # Include aliases
 source ~/.aliases
@@ -24,5 +23,7 @@ source ~/.aliases
 # Include exports
 source ~/.exports
 
-source $ZSH/oh-my-zsh.sh
+# Needed for git-completion. See http://goo.gl/SZkRo3
+fpath=(~/.zsh $fpath)
+
 
