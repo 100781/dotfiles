@@ -23,8 +23,7 @@ function doIt () {
   # Include shell settings
   echo "\n--== Sourcing dotfiles ==--"
   source .zshrc && echo "Sourcing: $HOME/.zshrc"
-  source .aliases && echo "Sourcing: $HOME/.aliases"
-  source .exports && echo "Sourcing: $HOME/.exports"
+  echo "You must restart your shell in order to recognize new aliases, export variables, etc..."
 
   # Include OSX settings
   if [[ "$OSTYPE" =~ ^darwin ]]; then
