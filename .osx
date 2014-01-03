@@ -489,6 +489,7 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 # Kill affected applications                                                  #
 ###############################################################################
 
+echo "\n--== Restarting Applications ==--"
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
 	"Mail" "Safari" "SystemUIServer" "Terminal" "iCal"; do
 	killall "$app" > /dev/null 2>&1

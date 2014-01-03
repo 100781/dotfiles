@@ -22,9 +22,9 @@ function doIt () {
 
   # Include shell settings
   echo "\n--== Sourcing dotfiles ==--"
-  source ~/.zshrc
-  source ~/.aliases
-  source ~/.exports
+  source .zshrc && echo "Sourcing: $HOME/.zshrc"
+  source .aliases && echo "Sourcing: $HOME/.aliases"
+  source .exports && echo "Sourcing: $HOME/.exports"
 
   # Include OSX settings
   if [[ "$OSTYPE" =~ ^darwin ]]; then
@@ -34,7 +34,7 @@ function doIt () {
   # Restart apache
   echo "\n--== Restarting LAMP ==--"
   mysql.server restart >/dev/null
-  echo "Restarted Apache & Mysql"
+  echo "Restarted Apache & MYSQL"
 }
 
 if [[ "$1" == "-y" ]]; then
