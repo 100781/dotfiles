@@ -36,6 +36,7 @@ function doIt () {
   echo "Restarted Apache & MYSQL"
 
   # Misc
+  echo "\n--== Misc Commands ==--"
   mkdir /tmp/xhprof
 }
 
