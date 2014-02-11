@@ -34,6 +34,9 @@ function doIt () {
   echo "\n--== Restarting LAMP ==--"
   mysql.server restart >/dev/null
   echo "Restarted Apache & MYSQL"
+
+  # Misc
+  mkdir /tmp/xhprof
 }
 
 if [[ "$1" == "-y" ]]; then
