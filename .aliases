@@ -62,8 +62,8 @@ alias badge="tput bel"
 #################################
 # Development aliases
 alias dr="drush"
-alias dx='export XDEBUG_CONFIG="idekey=PHPSTORM"'
-alias dxx='export XDEBUG_CONFIG="idkey="'
+alias dx='export XDEBUG_CONFIG="idekey=PHPSTORM" && echo "Xdebug activated"'
+alias dxx='unset XDEBUG_CONFIG && echo "Xdebug de-activated"'
 
 # Tail logs
 alias tphp="tail -f /Applications/MAMP/logs/php_error.log"
