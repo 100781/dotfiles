@@ -32,7 +32,7 @@ function doIt () {
 
   # Restart apache
   echo "\n--== Restarting LAMP ==--"
-  mysql.server restart >/dev/null
+  sudo -u alex mysql.server restart >/dev/null
   echo "Restarted Apache & MYSQL"
 
   # Misc
