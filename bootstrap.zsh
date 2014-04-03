@@ -32,12 +32,14 @@ function doIt () {
 
   # Restart apache
   echo "\n--== Restarting LAMP ==--"
-  sudo -u alex mysql.server restart >/dev/null
+  sudo -u bleen mysql.server restart
+  echo "Restarting apache"
+  sudo apachectl -k restart
   echo "Restarted Apache & MYSQL"
 
   # Misc
   echo "\n--== Misc Commands ==--"
-  mkdir /tmp/xhprof
+  mkdir /tmp/xhprof -v
 }
 
 if [[ "$1" == "-y" ]]; then
