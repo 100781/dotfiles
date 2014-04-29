@@ -40,6 +40,7 @@ function doIt () {
   # Misc
   echo "\n--== Misc Commands ==--"
   mkdir /tmp/xhprof -v
+  ln -s "$(brew --prefix)/Library/Contributions/brew_zsh_completion.zsh" /usr/local/share/zsh/site-functions
 }
 
 if [[ "$1" == "-y" ]]; then
