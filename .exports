@@ -14,12 +14,14 @@ export LANG="en_US"
 export LC_ALL="en_US.UTF-8"
 
 # Ruby Gems
-#export GEM_HOME=$(brew --prefix)
+export GEM_HOME=$(brew --prefix)
 # Keep Ruby Gems in .gem folder instead. Putting in in Brew is incorrect
 # unless you're using ruby/gems from Homebrew.
-# Ruby json gem needs to be outdata for mac if you get json error
-# this will solve it ```export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install json```
-export GEM_HOME="/Users/bleen/.gem"
+# Screw you Eric. Homebrew dir FTW
+# export GEM_HOME="/Users/bleen/.gem"
+
+# RUBY Note: If you see errors abotu the json 1.8.1 gem, this might solve it:
+# ```export ARCHFLAGS=-Wno-error=unused-command-line-argument-hard-error-in-future gem install json```
 
 
 # ssh

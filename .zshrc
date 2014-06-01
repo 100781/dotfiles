@@ -26,4 +26,6 @@ source ~/.exports
 # Needed for git-completion. See http://goo.gl/SZkRo3
 fpath=(~/.zsh $fpath)
 
+# Make sure rbenv is handling ruby.
+eval "$(rbenv init - --no-rehash)"
 
