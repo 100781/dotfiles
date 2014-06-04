@@ -14,6 +14,7 @@ fe80::1%lo0	localhost
 127.0.0.1   local.pub7
 127.0.0.1   local.publisher.install
 127.0.0.1   local.publisher.update
+127.0.0.1   local.publisher.demo
 
 127.0.0.1   local.nbcumedvil
 
