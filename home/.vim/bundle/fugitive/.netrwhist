@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/bleen/Cloud/Dropbox (Personal)/Sites/publisher/7/docroot/profiles/publisher/modules/custom/pub_analytics'
+let g:netrw_dirhist_2='/Users/bleen/Cloud/Dropbox (Personal)/Sites/publisher/dbtv/.bundle'
+let g:netrw_dirhist_3='/Users/bleen/Cloud/Repos/dotfiles/.lamp/conf.d'
+let g:netrw_dirhist_4='/Users/bleen/.composer'
