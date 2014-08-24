@@ -1,0 +1,33 @@
+[user]
+	name = bleen
+	email = git.119x@bleen.net
+	irc = bleen
+
+[color]
+	ui = true
+
+[alias]
+	# View abbreviated SHA, description, and history graph of the latest 20 commits
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+	lg = log -p
+	lol = log --pretty=oneline --abbrev-commit --graph --decorate
+	d = diff
+	s = status -s
+	st = status -bs
+	r = remote -v
+	a = apply --index
+	br = branch
+	ci = commit
+	co = checkout
+	cl = clone -f -d
+	f = fetch --all
+	showlast = !git log -1 --format="%h" | git show
+	wtf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes_global
+
+[push]
+	default = simple
+
