@@ -1,3 +1,6 @@
+" Force vim to use the bash shell to avoid errors in Fish Shell.
+set shell=bash
+
 " Following lines added by drush vimrc-install on Sun, 29 Dec 2013 03:14:00 +0000.
 set nocompatible
 call pathogen#infect('/Users/bleen/.drush/vimrc/bundle/{}')
