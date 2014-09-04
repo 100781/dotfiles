@@ -21,14 +21,18 @@ echo "Symlinked the mysql 'my.cnf' file"
 # php php.ini #
 ###############
 rm -rf /usr/local/etc/php/5.4/php.ini
+rm -rf /usr/local/etc/php/5.5/php.ini
 ln -s $HOME/.lamp/php54/php.ini /usr/local/etc/php/5.4/php.ini
-echo "Symlinked the php 'php.ini' file"
+ln -s $HOME/.lamp/php55/php.ini /usr/local/etc/php/5.5/php.ini
+echo "Symlinked the php 'php.ini' files (php5.4 & php5.5)"
 
 # php conf.d #
 ###############
 rm -rf /usr/local/etc/php/5.4/conf.d
+rm -rf /usr/local/etc/php/5.5/conf.d
 ln -s $HOME/.lamp/php54/conf.d /usr/local/etc/php/5.4/conf.d
-echo "Symlinked the php 'conf.d' file"
+ln -s $HOME/.lamp/php55/conf.d /usr/local/etc/php/5.5/conf.d
+echo "Symlinked the php 'conf.d' folders (php5.4 & php5.5)"
 
 # hosts #
 #########
