@@ -11,6 +11,7 @@ set -x -U LC_ALL en_US.UTF-8
 # Set PATH
 set PATH /usr/local/bin $PATH
 set PATH /usr/local/sbin $PATH
+set PATH /Users/bleen/Workspace/pub/bin $PATH
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
