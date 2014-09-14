@@ -27,4 +27,6 @@ set fish_plugins bundler brew sublime
 # Load oh-my-fish configuration.
 . $fish_path/oh-my-fish.fish
 
-source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+# Load homeshick
+source $HOME/.homesick/repos/homeshick/homeshick.fish
+
