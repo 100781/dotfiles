@@ -24,6 +24,7 @@
 	f = fetch --all
 	showlast = !git log -1 --format="%h" | git show
 	wtf = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	dumb = !git branch --merged | grep -v "\\*" | xargs -n 1 git branch -d
 
 [core]
 	excludesfile = ~/.gitignore_global
