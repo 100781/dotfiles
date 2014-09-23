@@ -13,8 +13,8 @@ set PATH /usr/local/bin $PATH
 set PATH /usr/local/sbin $PATH
 set PATH /Users/bleen/Workspace/pub/bin $PATH
 
-# Set GEM_HOME
-set GEM_HOME $(brew --prefix)
+# Set GEM_HOME to the same location as brew
+set GEM_HOME /usr/local
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
