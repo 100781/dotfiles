@@ -2,14 +2,14 @@
 
 # httpd.conf #
 ##############
-mv /etc/apache2/httpd.conf /etc/apache2/httpd.conf.orig
-ln -s $HOME/.lamp/apache/httpd.conf /etc/apache2/httpd.conf
+mv /usr/local/etc/apache2/2.4/httpd.conf /usr/local/etc/apache2/2.4/httpd.conf.orig
+ln -s $HOME/.lamp/apache/httpd.conf /usr/local/etc/apache2/2.4/httpd.conf
 echo "Symlinked the apache 'httpd.conf' file"
 
 # apache extra #
 ################
-mv /etc/apache2/extra /etc/apache2/extra.orig
-ln -s $HOME/.lamp/apache/extra /etc/apache2/extra
+mv /usr/local/etc/apache2/2.4/extra /usr/local/etc/apache2/2.4/extra.orig
+ln -s $HOME/.lamp/apache/extra /usr/local/etc/apache2/2.4/extra
 echo "Symlinked the apache 'extra' directory"
 
 # mysql my.cnf #
