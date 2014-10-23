@@ -322,8 +322,8 @@ $options['structure-tables']['common'] = array('cache', 'cache_filter', 'cache_m
 # $command_specific['script']['script-path'] = 'sites/all/scripts:profiles/myprofile/scripts';
 
 // Always show release notes when running pm-update or pm-updatecode.
-# $command_specific['pm-update'] = array('notes' => TRUE);
-# $command_specific['pm-updatecode'] = array('notes' => TRUE);
+$command_specific['pm-update'] = array('notes' => TRUE);
+$command_specific['pm-updatecode'] = array('notes' => TRUE);
 
 // Set a predetermined username and password when using site-install.
 $command_specific['site-install'] = array('account-name' => 'admin', 'account-pass' => 'pa55word', 'account-mail' => 'drupal.119x@bleen.net');
