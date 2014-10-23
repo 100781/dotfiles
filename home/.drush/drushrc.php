@@ -179,6 +179,7 @@ $options['drush_usage_send'] = TRUE;
  * specified, then 'sql-sync' will store dumps in temporary files.
  */
 $options['dump-dir'] = '/tmp';
+$options['backup-dir'] = '/tmp';
 
 /**
  * Specify the filename and path where 'sql-dump' should store backups of
