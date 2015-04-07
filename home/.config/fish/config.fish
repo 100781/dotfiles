@@ -10,7 +10,6 @@ set -x -U LC_ALL en_US.UTF-8
 
 # Set PATH
 set PATH /usr/local/bin $PATH
-set PATH /usr/local/sbin $PATH
 set PATH /Users/bleen/Workspace/flo/bin $PATH
 
 # Set GEM_HOME to the same location as brew
