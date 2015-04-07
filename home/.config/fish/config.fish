@@ -12,6 +12,10 @@ set -x -U LC_ALL en_US.UTF-8
 set PATH /usr/local/bin $PATH
 set PATH /Users/bleen/Workspace/flo/bin $PATH
 
+# Set homebrew to always create a symlink in /Applications instead of ~/Applications
+# @see https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md#options
+set -x -U HOMEBREW_CASK_OPTS "--appdir=/Applications"
+
 # Set GEM_HOME to the same location as brew
 set GEM_HOME /usr/local
 
