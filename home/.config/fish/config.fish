@@ -19,6 +19,9 @@ set -x -U HOMEBREW_CASK_OPTS "--appdir=/Applications"
 # Set GEM_HOME to the same location as brew
 set GEM_HOME /usr/local
 
+# Wrap git in the hub command
+eval (hub alias -s)
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-fish/plugins/*)
 # Custom plugins may be added to ~/.oh-my-fish/custom/plugins/
 # Example format: set fish_plugins autojump bundler
