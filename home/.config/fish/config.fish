@@ -11,6 +11,7 @@ set -x -U LC_ALL en_US.UTF-8
 # Set PATH
 set PATH /usr/local/bin $PATH
 set PATH /Users/bleen/Workspace/flo/bin $PATH
+set PATH /Users/bleen/.composer/vendor/bin $PATH
 
 # Set homebrew to always create a symlink in /Applications instead of ~/Applications
 # @see https://github.com/caskroom/homebrew-cask/blob/master/USAGE.md#options
