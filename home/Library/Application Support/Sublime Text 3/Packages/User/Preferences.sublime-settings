@@ -2,7 +2,7 @@
 	"always_show_minimap_viewport": true,
 	"draw_minimap_border": true,
 	"draw_white_space": "all",
-	"font_size": 16,
+	"font_size": 24,
 	"highlight_line": true,
 	"rulers":
 	[
