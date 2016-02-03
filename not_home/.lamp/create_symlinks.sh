@@ -4,7 +4,8 @@
 ##############
 mv /private/etc/apache2/httpd.conf /private/etc/apache2/httpd.conf.orig
 ln -s $HOME/.lamp/apache/httpd.conf /private/etc/apache2/httpd.conf
-echo "Symlinked the apache 'httpd.conf' file"
+sudo mkdir /usr/local/var/run/apache2
+echo "Symlinked the apache 'httpd.conf' file and created /usr/local/var/run/apache2"
 
 # apache extra #
 ################
