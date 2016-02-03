@@ -1,4 +1,7 @@
-#!/bin/bash 
+#!/bin/bash
+
+# Let's just get this out of the way.
+sudo -v
 
 # httpd.conf #
 ##############
