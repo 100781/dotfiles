@@ -119,6 +119,14 @@ defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
 ###############################################################################
+# Photos                                                                      #
+###############################################################################
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+
+###############################################################################
 # Spotlight                                                                   #
 ###############################################################################
 
