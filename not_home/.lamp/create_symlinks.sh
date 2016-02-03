@@ -12,8 +12,10 @@ echo "Symlinked the apache 'httpd.conf' file and created /usr/local/var/run/apac
 
 # apache extra #
 ################
-mv -n /private/etc/apache2/extra /private/etc/apache2/extra.orig
-ln -s $HOME/.lamp/apache/extra /private/etc/apache2/extra
+sudo mv -n /private/etc/apache2/extra /private/etc/apache2/extra.orig
+sudo tar -cvzpf /private/etc/apache2/extra_orig.tar.gz /private/etc/apache2/extra.orig
+sudo rm -rf /private/etc/apache2/extra.orig
+sudo ln -s $HOME/.lamp/apache/extra /private/etc/apache2/extra
 echo "Symlinked the apache 'extra' directory"
 
 # mysql my.cnf #
@@ -32,6 +34,8 @@ echo "Symlinked the php 'php.ini' files (php5.5)"
 # php conf.d #
 ###############
 mv -n /usr/local/etc/php/5.5/conf.d /usr/local/etc/php/5.5/conf.d.orig
+tar -cvzpf /usr/local/etc/php/5.5/conf.d.orig.tar.gz /usr/local/etc/php/5.5/conf.d.orig
+rm -rf /usr/local/etc/php/5.5/conf.d.orig
 ln -s $HOME/.lamp/php55/conf.d /usr/local/etc/php/5.5/conf.d
 echo "Symlinked the php 'conf.d' folders (php5.5)"
 
